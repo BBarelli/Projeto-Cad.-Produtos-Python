@@ -7,7 +7,13 @@ import pyautogui
 '''
 Dica: Inicie deixandesclarecendo o que precisa ser feito.
 
-Passo 1: Entra no sistemas da empresa: https://dlp.hashtagtreinamentos.com/python/intensivao/login
+Passo 1: Entra no sistemas da empresa: https://dlp.hashtagtreinamentos.com/python/intensivao/login'''
+# Abri o chrome
+pyautogui.press('win')
+pyautogui.write('chrome')
+pyautogui.click('enter')
+
+'''
 Passo 2: Login
 Passo 3: Importar a base de dados
 Passo 4: Cadastrar 1 Produto 
