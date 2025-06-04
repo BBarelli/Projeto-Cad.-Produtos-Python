@@ -12,7 +12,9 @@
  pyautogui.hotkey --> apertar um combinação de teclas
  pyautogui.PAUSE --> definir uma configuração
  pyautogui.click(button = rigth) // pyautogui.click(clicks = 2) dual clicks 
+ pyautogui.scroll() número positivo: sobe // número negativo: desce
  print(pyautogui.position()) --> descobrir a posição do mouse em um campo dá um time.sleep(5) e...-->pyautogui.position(x=1883, y=624)
+
 
 '''
 
@@ -85,11 +87,14 @@ pyautogui.press('tab')
 obs = ''
 pyautogui.write(obs)
 pyautogui.press('tab')
+# Texto vazio em obs
 
 pyautogui.press('enter')
-# Texto vazio em obs
+
+# subir o scroll ou descer 
+pyautogui.scroll(10000)
+
 '''
-Passo 4: Cadastrar 1 Produto 
 Passo 5: Repertir para todos os produtos
 
 '''
