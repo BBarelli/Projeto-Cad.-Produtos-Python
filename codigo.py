@@ -45,7 +45,7 @@ pyautogui.write('testando@gmail.com')
 pyautogui.press('tab')
 
 # Senha
-pyautogui.write('1234567')
+pyautogui.write('Senha001')
 pyautogui.press('tab')
 pyautogui.press('enter')
 time.sleep(2)
@@ -85,6 +85,8 @@ pyautogui.press('tab')
 obs = ''
 pyautogui.write(obs)
 pyautogui.press('tab')
+
+pyautogui.press('enter')
 # Texto vazio em obs
 '''
 Passo 4: Cadastrar 1 Produto 
