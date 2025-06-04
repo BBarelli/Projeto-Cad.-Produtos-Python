@@ -20,6 +20,10 @@ import pyautogui
 import time
 import pandas as pd
 
+pd.set_option('display.max_columns', None)  # mostra todas as colunas
+pd.set_option('display.expand_frame_repr', False)  # impede quebra de linha
+
+
 # Definir o tempo de transição entre as telas
 pyautogui.PAUSE = 1
 
@@ -37,11 +41,11 @@ pyautogui.press('enter')
 
 # Passo 2: Login
 pyautogui.click(x=-948, y=380)
-pyautogui.write('breno.barelli4@gmail.com')
+pyautogui.write('testando@gmail.com')
 pyautogui.press('tab')
 
 # Senha
-pyautogui.write('123456')
+pyautogui.write('1234567')
 pyautogui.press('tab')
 pyautogui.press('enter')
 time.sleep(2)
@@ -50,10 +54,38 @@ time.sleep(2)
 tabela = pd.read_csv('produtos.csv')
 print(tabela)
 
-#Passo 4: Cadastrar 1 Produto 
+# Passo 4: Cadastrar 1 Produto
 time.sleep(4)
-print(pyautogui.position())
+pyautogui.click(x=-921, y=263)
 
+codigo = 'MOLO000251'
+pyautogui.write(codigo)
+pyautogui.press('tab')
+
+marca = 'Logitech'
+pyautogui.write(marca)
+pyautogui.press('tab')
+
+tipo = 'Logitech'
+pyautogui.write(tipo)
+pyautogui.press('tab')
+
+categoria = '1'
+pyautogui.write(categoria)
+pyautogui.press('tab')
+
+preco_unitario = '25.95'
+pyautogui.write(preco_unitario)
+pyautogui.press('tab')
+
+custo = '6.5'
+pyautogui.write(custo)
+pyautogui.press('tab')
+
+obs = ''
+pyautogui.write(obs)
+pyautogui.press('tab')
+# Texto vazio em obs
 '''
 Passo 4: Cadastrar 1 Produto 
 Passo 5: Repertir para todos os produtos
