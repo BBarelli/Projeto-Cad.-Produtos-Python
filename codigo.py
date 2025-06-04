@@ -18,6 +18,7 @@
 
 import pyautogui
 import time
+import pandas as pd
 
 # Definir o tempo de transição entre as telas
 pyautogui.PAUSE = 1
@@ -35,8 +36,6 @@ pyautogui.write('https://dlp.hashtagtreinamentos.com/python/intensivao/login')
 pyautogui.press('enter')
 
 # Passo 2: Login
-# time.sleep(5) 'congelar a tela'
-# print(pyautogui.position()) Somente pra pegar a posição do mouse
 pyautogui.click(x=-948, y=380)
 pyautogui.write('breno.barelli4@gmail.com')
 pyautogui.press('tab')
@@ -45,10 +44,17 @@ pyautogui.press('tab')
 pyautogui.write('123456')
 pyautogui.press('tab')
 pyautogui.press('enter')
-time.sleep(3)
+time.sleep(2)
+
+# Passo 3: Importar a base de dados
+tabela = pd.read_csv('produtos.csv')
+print(tabela)
+
+#Passo 4: Cadastrar 1 Produto 
+time.sleep(4)
+print(pyautogui.position())
 
 '''
-Passo 3: Importar a base de dados
 Passo 4: Cadastrar 1 Produto 
 Passo 5: Repertir para todos os produtos
 
