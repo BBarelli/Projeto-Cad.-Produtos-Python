@@ -46,9 +46,7 @@ pyautogui.press('enter')
 
 
 '''
-
 Passo 3: Importar a base de dados
 Passo 4: Cadastrar 1 Produto 
 Passo 5: Repertir para todos os produtos
-
 '''
