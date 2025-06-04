@@ -29,15 +29,19 @@ pyautogui.press('win')
 pyautogui.write('Chrome - Power up')
 pyautogui.press('enter')
 
+
 # Digitar o site
 pyautogui.write('https://dlp.hashtagtreinamentos.com/python/intensivao/login')
 pyautogui.press('enter')
-time.sleep(2)
 
 # Passo 2: Login
-pyautogui.click()
-time.sleep(5)
-print(pyautogui.position(x=1883, y=624))
+# time.sleep(5) - 'congelar a tela'
+# print(pyautogui.position()) - Somente pra pegar a possição do mouse
+pyautogui.click(x=-642, y=722)
+pyautogui.write('breno.barelli4@gmail.com')
+pyautogui.press('enter')
+pyautogui.click(x=-501, y=810)
+pyautogui.write('123456')
 pyautogui.press('enter')
 
 
