@@ -11,6 +11,7 @@
  pyautogui.write --> escrever um texto
  pyautogui.hotkey --> apertar um combinação de teclas
  pyautogui.PAUSE --> definir uma configuração
+ pyautogui.click(button = rigth) // pyautogui.click(clicks = 2) dual clicks 
  print(pyautogui.position()) --> descobrir a posição do mouse em um campo dá um time.sleep(5) e...-->pyautogui.position(x=1883, y=624)
 
 '''
@@ -29,24 +30,26 @@ pyautogui.press('win')
 pyautogui.write('Chrome - Power up')
 pyautogui.press('enter')
 
-
 # Digitar o site
 pyautogui.write('https://dlp.hashtagtreinamentos.com/python/intensivao/login')
 pyautogui.press('enter')
 
 # Passo 2: Login
-# time.sleep(5) - 'congelar a tela'
-# print(pyautogui.position()) - Somente pra pegar a possição do mouse
-pyautogui.click(x=-642, y=722)
+# time.sleep(5) 'congelar a tela'
+# print(pyautogui.position()) Somente pra pegar a posição do mouse
+pyautogui.click(x=-948, y=380)
 pyautogui.write('breno.barelli4@gmail.com')
-pyautogui.press('enter')
-pyautogui.click(x=-501, y=810)
-pyautogui.write('123456')
-pyautogui.press('enter')
+pyautogui.press('tab')
 
+# Senha
+pyautogui.write('123456')
+pyautogui.press('tab')
+pyautogui.press('enter')
+time.sleep(3)
 
 '''
 Passo 3: Importar a base de dados
 Passo 4: Cadastrar 1 Produto 
 Passo 5: Repertir para todos os produtos
+
 '''
