@@ -11,6 +11,6 @@
  pyautogui.write --> escrever um texto
  pyautogui.hotkey --> apertar um combinação de teclas
  pyautogui.PAUSE --> definir uma configuração
- pyautogui.position
+ print(pyautogui.position()) --> descobrir a posição do mouse em um campo dá um time.sleep(5) e...-->pyautogui.position(x=1883, y=624)
 
 '''

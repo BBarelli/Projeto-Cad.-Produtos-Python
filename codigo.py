@@ -1,7 +1,6 @@
 import pyautogui
 import time
 
-
 # Definir o tempo de transição entre as telas
 pyautogui.PAUSE = 1
 
@@ -12,12 +11,17 @@ pyautogui.press('win')
 # Execute o comando abaixo
 pyautogui.write('Chrome - Power up')
 pyautogui.press('enter')
+
 # Digitar o site
 pyautogui.write('https://dlp.hashtagtreinamentos.com/python/intensivao/login')
 pyautogui.press('enter')
 time.sleep(2)
+
 # Passo 2: Login
 pyautogui.click()
+time.sleep(5)
+print(pyautogui.position(x=1883, y=624))
+pyautogui.press('enter')
 
 
 '''
