@@ -3,7 +3,7 @@ import time
 import pandas as pd
 
 
-#consulta ao gpt
+# consulta ao gpt
 pd.set_option('display.max_columns', None)  # mostra todas as colunas
 pd.set_option('display.expand_frame_repr', False)  # impede quebra de linha
 
@@ -38,14 +38,14 @@ time.sleep(2)
 tabela = pd.read_csv('produtos.csv')
 print(tabela)
 
-time.sleep(3)
+time.sleep(1)
 
 # Passo 4: Cadastrar Todos os Produto
 
-for linha in tabela.index: # Para cada linha da minha tabela
+for linha in tabela.index:  # Para cada linha da minha tabela
     pyautogui.click(x=-921, y=263)
 
-    codigo = tabela.loc[linha, 'codigo']
+    codigo = str(tabela.loc[linha, 'codigo'])
     pyautogui.write(codigo)
     pyautogui.press('tab')
 
@@ -53,11 +53,11 @@ for linha in tabela.index: # Para cada linha da minha tabela
     pyautogui.write(marca)
     pyautogui.press('tab')
 
-    tipo = tabela.loc[linha. 'tipo']
+    tipo = tabela.loc[linha, 'tipo']
     pyautogui.write(tipo)
     pyautogui.press('tab')
 
-    #Necessário tratar o valor int pra string (utilizando o str)
+    # Necessário tratar o valor int pra string (utilizando o str)
     categoria = str(tabela.loc[linha, 'categoria'])
     pyautogui.write(categoria)
     pyautogui.press('tab')
@@ -66,18 +66,16 @@ for linha in tabela.index: # Para cada linha da minha tabela
     pyautogui.write(preco_unitario)
     pyautogui.press('tab')
 
-    custo = str(tabela.loc[linha,'custo'])
+    custo = str(tabela.loc[linha, 'custo'])
     pyautogui.write(custo)
     pyautogui.press('tab')
 
     obs = str(tabela.loc[linha, 'obs'])
-    #Tratamento condicional pra que o campo desconsidere o 'NaN'
-    if obs != 'nan'
+    # Tratamento condicional pra que o campo desconsidere o 'NaN'
+    if obs != 'nan':
         pyautogui.write(obs)
     pyautogui.press('tab')
-    
+
     pyautogui.press('enter')
-    # subir o scroll ou descer 
+    # subir o scroll ou descer
     pyautogui.scroll(10000)
-
-
