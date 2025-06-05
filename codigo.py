@@ -15,12 +15,15 @@
  pyautogui.scroll() número positivo: sobe // número negativo: desce
  print(pyautogui.position()) --> descobrir a posição do mouse em um campo dá um time.sleep(5) e...-->pyautogui.position(x=1883, y=624)
 
+ Tratando ERRO:
+ verificar o TypeErro
 
 '''
 
 import pyautogui
 import time
 import pandas as pd
+
 
 pd.set_option('display.max_columns', None)  # mostra todas as colunas
 pd.set_option('display.expand_frame_repr', False)  # impede quebra de linha
@@ -75,23 +78,24 @@ for linha in tabela.index: # Para cada linha da minha tabela
     pyautogui.write(tipo)
     pyautogui.press('tab')
 
-    categoria = tabela.loc[linha, 'categoria']
+    #Necessário tratar o valor int pra string (utilizando o str)
+    categoria = str(tabela.loc[linha, 'categoria'])
     pyautogui.write(categoria)
     pyautogui.press('tab')
 
-    preco_unitario = '25.95'
+    preco_unitario = str(tabela.loc[linha, 'preco_unitario'])
     pyautogui.write(preco_unitario)
     pyautogui.press('tab')
 
-    custo = '6.5'
+    custo = str(tabela.loc[linha,'custo'])
     pyautogui.write(custo)
     pyautogui.press('tab')
 
-    obs = ''
-    pyautogui.write(obs)
+    obs = str(tabela.loc[linha, 'obs'])
+    if obs != 'nan'
+        pyautogui.write(obs)
     pyautogui.press('tab')
-    # Texto vazio em obs
-
+    
     pyautogui.press('enter')
 
     # subir o scroll ou descer 
