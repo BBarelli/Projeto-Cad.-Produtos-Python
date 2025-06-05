@@ -97,11 +97,7 @@ for linha in tabela.index: # Para cada linha da minha tabela
     pyautogui.press('tab')
     
     pyautogui.press('enter')
-
     # subir o scroll ou descer 
     pyautogui.scroll(10000)
-
-
-# Passo 5: Repertir para todos os produtos  
 
 
