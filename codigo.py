@@ -3,6 +3,7 @@ import time
 import pandas as pd
 
 
+#consulta ao gpt
 pd.set_option('display.max_columns', None)  # mostra todas as colunas
 pd.set_option('display.expand_frame_repr', False)  # impede quebra de linha
 
@@ -39,7 +40,7 @@ print(tabela)
 
 time.sleep(3)
 
-# Passo 4: Cadastrar 1 Produto
+# Passo 4: Cadastrar Todos os Produto
 
 for linha in tabela.index: # Para cada linha da minha tabela
     pyautogui.click(x=-921, y=263)
@@ -70,6 +71,7 @@ for linha in tabela.index: # Para cada linha da minha tabela
     pyautogui.press('tab')
 
     obs = str(tabela.loc[linha, 'obs'])
+    #Tratamento condicional pra que o campo desconsidere o 'NaN'
     if obs != 'nan'
         pyautogui.write(obs)
     pyautogui.press('tab')
