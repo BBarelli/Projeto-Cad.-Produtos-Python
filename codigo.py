@@ -57,44 +57,47 @@ tabela = pd.read_csv('produtos.csv')
 print(tabela)
 
 # Passo 4: Cadastrar 1 Produto
-time.sleep(4)
-pyautogui.click(x=-921, y=263)
+time.sleep(3)
 
-codigo = 'MOLO000251'
-pyautogui.write(codigo)
-pyautogui.press('tab')
+# Para cada linha da minha tabela
+for linha in tabela.index:
+    pyautogui.click(x=-921, y=263)
 
-marca = 'Logitech'
-pyautogui.write(marca)
-pyautogui.press('tab')
+    codigo = 'MOLO000251'
+    pyautogui.write(codigo)
+    pyautogui.press('tab')
 
-tipo = 'Logitech'
-pyautogui.write(tipo)
-pyautogui.press('tab')
+    marca = 'Logitech'
+    pyautogui.write(marca)
+    pyautogui.press('tab')
 
-categoria = '1'
-pyautogui.write(categoria)
-pyautogui.press('tab')
+    tipo = 'Logitech'
+    pyautogui.write(tipo)
+    pyautogui.press('tab')
 
-preco_unitario = '25.95'
-pyautogui.write(preco_unitario)
-pyautogui.press('tab')
+    categoria = '1'
+    pyautogui.write(categoria)
+    pyautogui.press('tab')
 
-custo = '6.5'
-pyautogui.write(custo)
-pyautogui.press('tab')
+    preco_unitario = '25.95'
+    pyautogui.write(preco_unitario)
+    pyautogui.press('tab')
 
-obs = ''
-pyautogui.write(obs)
-pyautogui.press('tab')
-# Texto vazio em obs
+    custo = '6.5'
+    pyautogui.write(custo)
+    pyautogui.press('tab')
 
-pyautogui.press('enter')
+    obs = ''
+    pyautogui.write(obs)
+    pyautogui.press('tab')
+    # Texto vazio em obs
 
-# subir o scroll ou descer 
-pyautogui.scroll(10000)
+    pyautogui.press('enter')
 
-'''
-Passo 5: Repertir para todos os produtos
+    # subir o scroll ou descer 
+    pyautogui.scroll(10000)
 
-'''
+
+# Passo 5: Repertir para todos os produtos  
+
+
