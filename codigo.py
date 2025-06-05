@@ -56,26 +56,26 @@ time.sleep(2)
 tabela = pd.read_csv('produtos.csv')
 print(tabela)
 
-# Passo 4: Cadastrar 1 Produto
 time.sleep(3)
 
-# Para cada linha da minha tabela
-for linha in tabela.index:
+# Passo 4: Cadastrar 1 Produto
+
+for linha in tabela.index: # Para cada linha da minha tabela
     pyautogui.click(x=-921, y=263)
 
-    codigo = 'MOLO000251'
+    codigo = tabela.loc[linha, 'codigo']
     pyautogui.write(codigo)
     pyautogui.press('tab')
 
-    marca = 'Logitech'
+    marca = tabela.loc[linha, 'marca']
     pyautogui.write(marca)
     pyautogui.press('tab')
 
-    tipo = 'Logitech'
+    tipo = tabela.loc[linha. 'tipo']
     pyautogui.write(tipo)
     pyautogui.press('tab')
 
-    categoria = '1'
+    categoria = tabela.loc[linha, 'categoria']
     pyautogui.write(categoria)
     pyautogui.press('tab')
 
